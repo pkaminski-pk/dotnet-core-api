@@ -7,12 +7,14 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using TodoApi.Models;
 
 namespace TodoApi.Controllers
 {
     [Route("api/[controller]")] 
     [ApiController]
+    [Authorize]
     public class TodoController : Controller
     {
         private readonly TodoContext _context;
